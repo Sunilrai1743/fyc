@@ -4,10 +4,10 @@ import { PostAwardModal } from '../components/PostModals.jsx';
 import { STATIC_CERTIFICATES } from '../data/certificates.js';
 import API from '../utils/api.js';
 
-const isWithin5Days = (createdAt) => {
-  if (!createdAt) return false;
-  return (new Date() - new Date(createdAt)) / (1000 * 60 * 60 * 24) <= 5;
-};
+// const isWithin5Days = (createdAt) => {
+//   if (!createdAt) return false;
+//   return (new Date() - new Date(createdAt)) / (1000 * 60 * 60 * 24) <= 5;
+// };
 
 const AwardsPage = () => {
   const { isAdmin } = useAuth();
@@ -40,12 +40,12 @@ const AwardsPage = () => {
 
   const handleAdd = (c) => setCerts(prev => [c, ...prev]);
 
-  const handleDelete = async (id, createdAt) => {
-    if (!isWithin5Days(createdAt)) {
-      setDeleteError('This award is older than 5 days and cannot be deleted.');
-      setTimeout(() => setDeleteError(''), 5000);
-      return;
-    }
+  const handleDelete = async (id) => {//(id, createdAt)
+    // if (!isWithin5Days(createdAt)) {
+    //   setDeleteError('This award is older than 5 days and cannot be deleted.');
+    //   setTimeout(() => setDeleteError(''), 5000);
+    //   return;
+    // }
     if (!window.confirm('Are you sure you want to delete this award?')) return;
     try {
       await API.delete(`/certificates/${id}`);
@@ -92,8 +92,8 @@ const AwardsPage = () => {
             <div className="grid-3">
               {certs.map(c => {
                 const isStatic = String(c._id).startsWith('static_');
-                const canDelete = isAdmin && !isStatic && isWithin5Days(c.createdAt);
-                const tooOld   = isAdmin && !isStatic && !isWithin5Days(c.createdAt);
+                const canDelete = isAdmin && !isStatic //&& isWithin5Days(c.createdAt);
+                //const tooOld   = isAdmin && !isStatic && !isWithin5Days(c.createdAt);
 
                 // Image: supports { url } object, plain string, or null
                 const imgSrc = c.image?.url || (typeof c.image === 'string' ? c.image : null);
@@ -152,17 +152,17 @@ const AwardsPage = () => {
 
                       {canDelete && (
                         <button
-                          onClick={() => handleDelete(c._id, c.createdAt)}
+                          onClick={() => handleDelete(c._id)}//(c._id, c.createdAt)
                           style={{ marginTop: '1rem', background: '#FEF2F2', color: '#C8102E', border: '1px solid #FECACA', borderRadius: '6px', padding: '5px 14px', fontSize: '0.78rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font)' }}
                         >
                           Delete
                         </button>
                       )}
-                      {tooOld && (
+                      {/* {tooOld && (
                         <div style={{ marginTop: '0.75rem', background: '#F9FAFB', border: '1px solid var(--gray-200)', borderRadius: '6px', padding: '5px 10px', fontSize: '0.72rem', color: 'var(--gray-400)', textAlign: 'center', lineHeight: 1.4 }}>
                           🔒 Locked (older than 5 days)
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 );

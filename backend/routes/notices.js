@@ -77,15 +77,15 @@ router.delete('/:id', protect, adminOnly, async (req, res) => {
     const notice = await Notice.findById(req.params.id);
     if (!notice) return res.status(404).json({ success: false, message: 'Notice not found' });
 
-    const diffDays = (new Date() - new Date(notice.createdAt)) / (1000 * 60 * 60 * 24);
-    if (diffDays > 5) {
-      return res.status(403).json({
-        success: false,
-        message: 'This notice was posted more than 5 days ago and cannot be deleted.',
-        cannotDelete: true,
-        daysOld: Math.floor(diffDays),
-      });
-    }
+    // const diffDays = (new Date() - new Date(notice.createdAt)) / (1000 * 60 * 60 * 24);
+    // if (diffDays > 5) {
+    //   return res.status(403).json({
+    //     success: false,
+    //     message: 'This notice was posted more than 5 days ago and cannot be deleted.',
+    //     cannotDelete: true,
+    //     daysOld: Math.floor(diffDays),
+    //   });
+    // }
 
     await Notice.findByIdAndDelete(req.params.id);
     res.json({ success: true, message: 'Notice deleted successfully' });

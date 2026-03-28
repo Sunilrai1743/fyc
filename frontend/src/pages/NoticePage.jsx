@@ -18,17 +18,17 @@ const PRIORITY_STYLE = {
   low:    { bg: '#F0FDF4', color: '#166534', label: '🟢 Low Priority',  border: '#22C55E' },
 };
 
-const isWithin5Days = (createdAt) => {
-  if (!createdAt) return false;
-  return (new Date() - new Date(createdAt)) / (1000 * 60 * 60 * 24) <= 5;
-};
+// const isWithin5Days = (createdAt) => {
+//   if (!createdAt) return false;
+//   return (new Date() - new Date(createdAt)) / (1000 * 60 * 60 * 24) <= 5;
+// };
 
 // --- Expandable Notice Card ---
 const NoticeCard = ({ notice, isAdmin, onDelete }) => {
   const [expanded, setExpanded] = useState(false);
   const isStatic  = String(notice._id).startsWith('static_');
-  const canDelete = isAdmin && !isStatic && isWithin5Days(notice.createdAt);
-  const tooOld    = isAdmin && !isStatic && !isWithin5Days(notice.createdAt);
+  const canDelete = isAdmin && !isStatic //&& isWithin5Days(notice.createdAt);
+  //const tooOld    = isAdmin && !isStatic && !isWithin5Days(notice.createdAt);
   const cat       = CAT_STYLE[notice.category]  || CAT_STYLE.general;
   const pri       = PRIORITY_STYLE[notice.priority] || PRIORITY_STYLE.normal;
   const preview   = notice.body?.length > 160 ? notice.body.slice(0, 160) + '…' : notice.body;
@@ -95,17 +95,17 @@ const NoticeCard = ({ notice, isAdmin, onDelete }) => {
           <div style={{ display: 'flex', gap: '8px' }}>
             {canDelete && (
               <button
-                onClick={() => onDelete(notice._id, notice.createdAt)}
+                onClick={() => onDelete(notice._id)}//(notice._id, notice.createdAt)
                 style={{ background: '#FEF2F2', color: '#C8102E', border: '1px solid #FECACA', borderRadius: '6px', padding: '4px 12px', fontSize: '0.75rem', fontWeight: 600, cursor: 'pointer', fontFamily: 'var(--font)' }}
               >
                 Delete
               </button>
             )}
-            {tooOld && (
+            {/* {tooOld && (
               <span style={{ fontSize: '0.72rem', color: 'var(--gray-400)', padding: '4px 8px', background: '#F9FAFB', border: '1px solid var(--gray-200)', borderRadius: '6px' }}>
                 🔒 Locked
               </span>
-            )}
+            )} */}
           </div>
         </div>
 
@@ -144,12 +144,12 @@ const NoticePage = () => {
 
   const handleAdd = (n) => setNotices(prev => [n, ...prev]);
 
-  const handleDelete = async (id, createdAt) => {
-    if (!isWithin5Days(createdAt)) {
-      setDeleteError('This notice is older than 5 days and cannot be deleted.');
-      setTimeout(() => setDeleteError(''), 5000);
-      return;
-    }
+  const handleDelete = async (id) => {//(id, createdAt)
+    // if (!isWithin5Days(createdAt)) {
+    //   setDeleteError('This notice is older than 5 days and cannot be deleted.');
+    //   setTimeout(() => setDeleteError(''), 5000);
+    //   return;
+    // }
     if (!window.confirm('Are you sure you want to delete this notice?')) return;
     try {
       await API.delete(`/notices/${id}`);

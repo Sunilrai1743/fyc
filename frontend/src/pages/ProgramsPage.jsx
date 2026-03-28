@@ -43,10 +43,10 @@ const resolveCover = (p) =>
   (typeof p.image === 'string' ? p.image : null) ||
   null;
 
-const isWithin5Days = (createdAt) => {
-  if (!createdAt) return false;
-  return (new Date() - new Date(createdAt)) / (1000 * 60 * 60 * 24) <= 5;
-};
+// const isWithin5Days = (createdAt) => {
+//   if (!createdAt) return false;
+//   return (new Date() - new Date(createdAt)) / (1000 * 60 * 60 * 24) <= 5;
+// };
 
 // ─── Program Card ─────────────────────────────────────────────────────────────
 const ProgramCard = ({ p, isAdmin, onDelete }) => {
@@ -55,8 +55,8 @@ const ProgramCard = ({ p, isAdmin, onDelete }) => {
   const catLabel = CATS.find(c => c.key === p.category)?.label || p.category;
   const cover    = resolveCover(p);
   const isStatic = String(p._id).startsWith('static_');
-  const canDelete = isAdmin && !isStatic && isWithin5Days(p.createdAt);
-  const tooOld    = isAdmin && !isStatic && !isWithin5Days(p.createdAt);
+  const canDelete = isAdmin && !isStatic //&& isWithin5Days(p.createdAt);
+  //const tooOld    = isAdmin && !isStatic && !isWithin5Days(p.createdAt);
 
   return (
     <div className="card" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -135,7 +135,7 @@ const ProgramCard = ({ p, isAdmin, onDelete }) => {
 
         {canDelete && (
           <button
-            onClick={() => onDelete(p._id, p.createdAt)}
+            onClick={() => onDelete(p._id)} //(p._id, p.createdAt)
             style={{
               marginTop: '1rem', background: '#FEF2F2', color: '#C8102E',
               border: '1px solid #FECACA', borderRadius: '6px',
@@ -146,7 +146,7 @@ const ProgramCard = ({ p, isAdmin, onDelete }) => {
             Delete
           </button>
         )}
-        {tooOld && (
+        {/* {tooOld && (
           <div style={{
             marginTop: '0.75rem', background: '#F9FAFB',
             border: '1px solid var(--gray-200)', borderRadius: '6px',
@@ -155,7 +155,7 @@ const ProgramCard = ({ p, isAdmin, onDelete }) => {
           }}>
             🔒 Locked (older than 5 days)
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
@@ -192,12 +192,12 @@ const ProgramsPage = () => {
 
   const handleAdd = (p) => setPrograms(prev => [p, ...prev]);
 
-  const handleDelete = async (id, createdAt) => {
-    if (!isWithin5Days(createdAt)) {
-      setDeleteError('This program is older than 5 days and cannot be deleted.');
-      setTimeout(() => setDeleteError(''), 5000);
-      return;
-    }
+  const handleDelete = async (id) => { //(id, createdAt)
+    // if (!isWithin5Days(createdAt)) {
+    //   setDeleteError('This program is older than 5 days and cannot be deleted.');
+    //   setTimeout(() => setDeleteError(''), 5000);
+    //   return;
+    // }
     if (!window.confirm('Are you sure you want to delete this program?')) return;
     try {
       await API.delete(`/programs/${id}`);

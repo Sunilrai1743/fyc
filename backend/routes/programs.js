@@ -100,15 +100,15 @@ router.delete('/:id', protect, adminOnly, async (req, res) => {
     const program = await Program.findById(req.params.id);
     if (!program) return res.status(404).json({ success: false, message: 'Not found' });
 
-    const diffDays = (new Date() - new Date(program.createdAt)) / (1000 * 60 * 60 * 24);
-    if (diffDays > 5) {
-      return res.status(403).json({
-        success: false,
-        message: 'This program was posted more than 5 days ago and can only be removed from the codebase.',
-        cannotDelete: true,
-        daysOld: Math.floor(diffDays),
-      });
-    }
+    // const diffDays = (new Date() - new Date(program.createdAt)) / (1000 * 60 * 60 * 24);
+    // if (diffDays > 5) {
+    //   return res.status(403).json({
+    //     success: false,
+    //     message: 'This program was posted more than 5 days ago and can only be removed from the codebase.',
+    //     cannotDelete: true,
+    //     daysOld: Math.floor(diffDays),
+    //   });
+    // }
 
     await Program.findByIdAndDelete(req.params.id);
     await syncPrograms(Program);

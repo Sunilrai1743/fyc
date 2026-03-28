@@ -45,15 +45,15 @@ router.delete('/:id', protect, adminOnly, async (req, res) => {
     const cert = await Certificate.findById(req.params.id);
     if (!cert) return res.status(404).json({ success: false, message: 'Not found' });
 
-    const diffDays = (new Date() - new Date(cert.createdAt)) / (1000 * 60 * 60 * 24);
-    if (diffDays > 5) {
-      return res.status(403).json({
-        success: false,
-        message: 'This award was added more than 5 days ago and can only be removed from the codebase.',
-        cannotDelete: true,
-        daysOld: Math.floor(diffDays),
-      });
-    }
+    // const diffDays = (new Date() - new Date(cert.createdAt)) / (1000 * 60 * 60 * 24);
+    // if (diffDays > 5) {
+    //   return res.status(403).json({
+    //     success: false,
+    //     message: 'This award was added more than 5 days ago and can only be removed from the codebase.',
+    //     cannotDelete: true,
+    //     daysOld: Math.floor(diffDays),
+    //   });
+    // }
 
     await Certificate.findByIdAndDelete(req.params.id);
     await syncCertificates(Certificate);

@@ -399,7 +399,7 @@ const HomePage = () => {
                     )}
                   </div>
                   {sp.url ? (
-                  
+                   <a>
                     href={sp.url}
                     target="_blank"
                     rel="noopener noreferrer"

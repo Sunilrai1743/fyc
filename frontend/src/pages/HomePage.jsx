@@ -246,7 +246,7 @@ const HomePage = () => {
 
         {/* ── Background image (always shown as floor / loading placeholder) ── */}
         <img
-          src="/background1.avif"
+          src="/background.jpeg"
           alt=""
           style={{
             position: 'absolute', inset: 0,

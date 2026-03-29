@@ -34,7 +34,7 @@ const STATIC_STATS = [
 ];
 
 const SPONSORS = [
-  { id: 's1', name: 'View Brew', logo: '/viewbrew.png' },
+  { id: 's1', name: '<a href="https://www.instagram.com/viewbrewrestaurant">View Brew</a>', logo: '/viewbrew.png' },
 ];
 
 // ── Hero Slideshow component ──────────────────────────────────────────────────

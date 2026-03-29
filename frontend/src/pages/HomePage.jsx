@@ -351,7 +351,7 @@ const HomePage = () => {
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: '4rem', margin: '0 auto 1rem',
               }}>
-                <img src="/president.jpeg" alt="" style={{ width: '160px', height: '160px', borderRadius: '50%' }} />
+                <img src="/team/president.jpeg" alt="" style={{ width: '160px', height: '160px', borderRadius: '50%' }} />
               </div>
               <div style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 700, fontSize: '1rem' }}>Mr. Amrit Bahadur Rai</div>
               <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.78rem', letterSpacing: '1px', textTransform: 'uppercase', marginTop: '4px' }}>Club President</div>

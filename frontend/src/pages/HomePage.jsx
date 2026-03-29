@@ -34,7 +34,7 @@ const STATIC_STATS = [
 ];
 
 const SPONSORS = [
-  { id: 's1', name: 'View Brew', logo: '/sponsors/viewbrew.png' },
+  { id: 's1', name: 'View Brew', logo: '/sponsors/viewbrew.png', url: 'https://www.instagram.com/viewbrewrestaurant' },
 ];
 
 // ── Hero Slideshow component ──────────────────────────────────────────────────
@@ -398,7 +398,21 @@ const HomePage = () => {
                       </div>
                     )}
                   </div>
+                  {sp.url ? (
+                  
+                    href={sp.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="sponsor-name"
+                    style={{ color: 'var(--gray-700)', textDecoration: 'none' }}
+                    onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
+                    onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}
+                  >
+                    {sp.name}
+                  </a>
+                ) : (
                   <p className="sponsor-name">{sp.name}</p>
+                )}
                 </div>
               ))}
             </div>

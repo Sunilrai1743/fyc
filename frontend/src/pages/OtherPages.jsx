@@ -11,7 +11,7 @@ const EXECUTIVES = [
 
 // --- Team A (17 players) ---
 const TEAM_A = [
-  { _id: 'a1',  name: 'Player One',      position: 'Captain',    jerseyNumber: 10, image: null },
+  { _id: 'a1',  name: 'Suchan Rai ',      position: 'Captain',    jerseyNumber: 10, image: null },
   { _id: 'a2',  name: 'Player Two',      position: 'Vice Captain', jerseyNumber: 7, image: null },
   { _id: 'a3',  name: 'Player Three',    position: 'Goalkeeper', jerseyNumber: 1,  image: null },
   { _id: 'a4',  name: 'Player Four',     position: 'Defender',   jerseyNumber: 2,  image: null },
@@ -32,7 +32,7 @@ const TEAM_A = [
 
 // --- Team B (17 players) ---
 const TEAM_B = [
-  { _id: 'b1',  name: 'Player One',      position: 'Captain',    jerseyNumber: 10, image: null },
+  { _id: 'b1',  name: 'Yeakraj Rai ',      position: 'Captain',    jerseyNumber: 10, image: null },
   { _id: 'b2',  name: 'Player Two',      position: 'Vice Captain', jerseyNumber: 7, image: null },
   { _id: 'b3',  name: 'Player Three',    position: 'Goalkeeper', jerseyNumber: 1,  image: null },
   { _id: 'b4',  name: 'Player Four',     position: 'Defender',   jerseyNumber: 2,  image: null },

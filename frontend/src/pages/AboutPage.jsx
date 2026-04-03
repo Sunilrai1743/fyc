@@ -12,7 +12,7 @@ const EXECUTIVES = [
   { _id: 'e1', name: 'Mr.Amrit Bahadur Rai', position: 'President', image: '/team/president.jpeg' },
   { _id: 'e2', name: 'Mr.Pushpa Kumar Rai', position: 'General Secretary', image: '/team/secretary.jpeg' },
   { _id: 'e3', name: 'Treasurer', position: 'Treasurer', image: null },
-  { _id: 'e4', name: 'Mr.Sunil Rai', position: 'Technical Head', image: '/team/technical-head.jpeg' },
+  { _id: 'e4', name: 'Sunil Rai', position: 'Technical Head', image: '/team/technical-head.jpeg' },
 ];
 
 // --- Reusable Member Card ---

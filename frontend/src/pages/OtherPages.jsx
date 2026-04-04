@@ -32,17 +32,17 @@ const TEAM_A = [
 
 // --- Team B (17 players) ---
 const TEAM_B = [
-  { _id: 'b1',  name: 'Yeakraj Rai ',      position: 'Captain',    jerseyNumber: 10, image: null },
-  { _id: 'b2',  name: 'Nabin Rai',      position: 'Vice Captain', jerseyNumber: 7, image: null },
+  { _id: 'b1',  name: 'Yeakraj Rai ',      position: 'Captain',    jerseyNumber: 7, image: null },
+  { _id: 'b2',  name: 'Nabin Rai',      position: 'Vice Captain', jerseyNumber: 10, image: null },
   { _id: 'b3',  name: 'Pawan Rai',    position: 'Goalkeeper', jerseyNumber: 1,  image: null },
   { _id: 'b4',  name: 'Sunil Rai',     position: 'Defender',   jerseyNumber: 2,  image: null },
   { _id: 'b5',  name: 'Laxman Rai ',     position: 'Defender',   jerseyNumber: 3,  image: null },
   { _id: 'b6',  name: 'Yuman Rai',      position: 'Defender',   jerseyNumber: 4,  image: null },
-  { _id: 'b7',  name: 'Ramesh Rai',    position: 'Defender',   jerseyNumber: 5,  image: null },
+  { _id: 'b7',  name: 'Arun Rai',    position: 'Defender',   jerseyNumber: 5,  image: null },
   { _id: 'b8',  name: 'Player Eight',    position: 'Midfielder', jerseyNumber: 6,  image: null },
-  { _id: 'b9',  name: 'Player Nine',     position: 'Midfielder', jerseyNumber: 8,  image: null },
+  { _id: 'b9',  name: 'Ramesh Rai',     position: 'Midfielder', jerseyNumber: 8,  image: null },
   { _id: 'b10', name: 'Player Ten',      position: 'Midfielder', jerseyNumber: 9,  image: null },
-  { _id: 'b11', name: 'Player Eleven',   position: 'Forward',    jerseyNumber: 11, image: null },
+  { _id: 'b11', name: 'Ripan Rai ',   position: 'Forward',    jerseyNumber: 11, image: null },
   { _id: 'b12', name: 'Player Twelve',   position: 'Forward',    jerseyNumber: 12, image: null },
   { _id: 'b13', name: 'Player Thirteen', position: 'Midfielder', jerseyNumber: 13, image: null },
   { _id: 'b14', name: 'Player Fourteen', position: 'Defender',   jerseyNumber: 14, image: null },

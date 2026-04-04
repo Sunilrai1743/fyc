@@ -27,7 +27,7 @@ const TEAM_A = [
   { _id: 'a14', name: 'Subas Rai ', position: 'Defender',   jerseyNumber: 12, image: null },
   { _id: 'a15', name: 'Prithibi Rai ',  position: 'Goalkeeper', jerseyNumber: 15, image: null },
   { _id: 'a16', name: 'Lajan Rai ',  position: 'Forward',    jerseyNumber: 16, image: null },
-  { _id: 'a17', name: ' Laxman Rai ',position: 'Midfielder', jerseyNumber: 6, image: null },
+  { _id: 'a17', name: 'Laxman Rai ',position: 'Midfielder', jerseyNumber: 6, image: null },
 ];
 
 // --- Team B (17 players) ---
@@ -36,7 +36,7 @@ const TEAM_B = [
   { _id: 'b2',  name: 'Nabin Rai',      position: 'Vice Captain', jerseyNumber: 10, image: null },
   { _id: 'b3',  name: 'Pawan Rai',    position: 'Goalkeeper', jerseyNumber: 1,  image: null },
   { _id: 'b4',  name: 'Sunil Rai',     position: 'Defender',   jerseyNumber: 2,  image: null },
-  { _id: 'b5',  name: 'Laxman Rai ',     position: 'Defender',   jerseyNumber: 3,  image: null },
+  { _id: 'b5',  name: 'Laxman Rai(kanku) ',     position: 'Defender',   jerseyNumber: 3,  image: null },
   { _id: 'b6',  name: 'Yuman Rai',      position: 'Defender',   jerseyNumber: 4,  image: null },
   { _id: 'b7',  name: 'Arun Rai',    position: 'Defender',   jerseyNumber: 5,  image: null },
   { _id: 'b8',  name: 'Prakash Rai',    position: 'Midfielder', jerseyNumber: 6,  image: null },

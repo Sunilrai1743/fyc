@@ -18,16 +18,16 @@ const TEAM_A = [
   { _id: 'a5',  name: 'Lakhendra Rai',     position: 'Defender',   jerseyNumber: 3,  image: null },
   { _id: 'a6',  name: 'Umesh Rai ',      position: 'Defender',   jerseyNumber: 4,  image: null },
   { _id: 'a7',  name: 'Lakku Rai',    position: 'Defender',   jerseyNumber: 5,  image: null },
-  { _id: 'a8',  name: 'Samir Rai ',    position: 'Midfielder', jerseyNumber: 6,  image: null },
+  { _id: 'a8',  name: 'Samir Rai ',    position: 'Forward', jerseyNumber: 7,  image: null },
   { _id: 'a9',  name: 'Sudip Rai',     position: 'Midfielder', jerseyNumber: 30,  image: null },
   { _id: 'a10', name: 'Khagendra Rai',      position: 'Midfielder', jerseyNumber: 9,  image: null },
   { _id: 'a11', name: 'Prashant Rai',   position: 'Forward',    jerseyNumber: 11, image: null },
-  { _id: 'a12', name: 'Saiman Rai',   position: 'Forward',    jerseyNumber: 7, image: null },
+  { _id: 'a12', name: 'Saiman Rai',   position: 'Forward',    jerseyNumber: 19, image: null },
   { _id: 'a13', name: 'Ubaraj Rai', position: 'Midfielder', jerseyNumber: 13, image: null },
   { _id: 'a14', name: 'Subas Rai ', position: 'Defender',   jerseyNumber: 12, image: null },
   { _id: 'a15', name: 'Prithibi Rai ',  position: 'Goalkeeper', jerseyNumber: 15, image: null },
   { _id: 'a16', name: 'Lajan Rai ',  position: 'Forward',    jerseyNumber: 16, image: null },
-  { _id: 'a17', name: ' Laxman Rai ',position: 'Midfielder', jerseyNumber: 19, image: null },
+  { _id: 'a17', name: ' Laxman Rai ',position: 'Midfielder', jerseyNumber: 6, image: null },
 ];
 
 // --- Team B (17 players) ---

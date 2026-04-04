@@ -37,7 +37,7 @@ const TEAM_B = [
   { _id: 'b3',  name: 'Pawan Rai',    position: 'Goalkeeper', jerseyNumber: 1,  image: null },
   { _id: 'b4',  name: 'Sunil Rai',     position: 'Defender',   jerseyNumber: 2,  image: null },
   { _id: 'b5',  name: 'Laxman Rai ',     position: 'Defender',   jerseyNumber: 3,  image: null },
-  { _id: 'b6',  name: 'Player Six',      position: 'Defender',   jerseyNumber: 4,  image: null },
+  { _id: 'b6',  name: 'Yuman Rai',      position: 'Defender',   jerseyNumber: 4,  image: null },
   { _id: 'b7',  name: 'Player Seven',    position: 'Defender',   jerseyNumber: 5,  image: null },
   { _id: 'b8',  name: 'Player Eight',    position: 'Midfielder', jerseyNumber: 6,  image: null },
   { _id: 'b9',  name: 'Player Nine',     position: 'Midfielder', jerseyNumber: 8,  image: null },

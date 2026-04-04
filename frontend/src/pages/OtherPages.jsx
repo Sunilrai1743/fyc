@@ -27,7 +27,7 @@ const TEAM_A = [
   { _id: 'a14', name: 'Subas Rai ', position: 'Defender',   jerseyNumber: 12, image: null },
   { _id: 'a15', name: 'Prithibi Rai ',  position: 'Goalkeeper', jerseyNumber: 15, image: null },
   { _id: 'a16', name: 'Lajan Rai ',  position: 'Forward',    jerseyNumber: 16, image: null },
-  { _id: 'a17', name: ' Laxman Rai (saila)',position: 'Midfielder', jerseyNumber: 19, image: null },
+  { _id: 'a17', name: ' Laxman Rai ',position: 'Midfielder', jerseyNumber: 19, image: null },
 ];
 
 // --- Team B (17 players) ---

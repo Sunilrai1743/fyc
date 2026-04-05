@@ -35,7 +35,7 @@ const STATIC_STATS = [
 
 const SPONSORS = [
   { id: 's1', name: 'View Brew', logo: '/sponsors/viewbrew.png', url: 'https://www.instagram.com/viewbrewrestaurant' },
-  { id: 's2', name: 'Libju Collection', logo: '/sponsors/libju.png', url: 'https://www.facebook.com/profile.php?id=100083151821329' },
+  { id: 's2', name: 'Libju Collection', logo: '/sponsors/libju.jpeg', url: 'https://www.facebook.com/profile.php?id=100083151821329' },
 ];
 
 // ── Hero Slideshow component ──────────────────────────────────────────────────
